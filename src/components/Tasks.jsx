@@ -118,7 +118,11 @@ export default function Tasks({
                                     : ""
                               }
                            >
-                              {task.date}
+                              {new Date(task.date).toLocaleDateString("en-gb", {
+                                 year: "numeric",
+                                 month: "long",
+                                 day: "numeric",
+                              })}
                            </span>
                            <span
                               className={
